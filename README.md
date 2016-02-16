@@ -5,7 +5,7 @@ This is a hobby project I made for a friend purely based on invalidated theory t
 and see if I could predict the outcome of football matches using some simple machine learning algorithims. So accuracy is in no 
 way guaranteed but I will try my best to produce results to some level of accuracy and consistency.
 
-** Running
+**Running
 ```
 ...
 ```
@@ -22,4 +22,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 <hr />
-** TODO
+**TODO
