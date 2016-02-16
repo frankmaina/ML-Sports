@@ -18,14 +18,24 @@ more money to sports trading and betting than you can afford
 to lose, and you should never dedicate time to sports trading a
 nd betting when you need to be involved in other personal
  or business activities.
+
+Also odds as used in this project do not stand for actual points
+of reference as to who will win, just that it can be a sign of
+who is expected to win. The odds against bets are usually placed
+for weaker teams as the odds are stacked against them.
+Long odds: The likelihood of an event occurring is low.
+Short odds: The likelihood of an event occurring is high.
 """
 import csv
 from stats.main import *
 
-# prepare command line arguements passed in
+# prepare command line arguments passed in
 hometeam = "abcd"
 awayteam = "qwerty"
 
 odds = [1.66, 3.58, 5.62]
 
-odds_stats(odds)
+odds_percentage = odds_stats(odds)
+
+
+print get_best_odds(odds)[0]
