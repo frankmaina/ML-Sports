@@ -5,12 +5,12 @@ This is a hobby project I made for a friend purely based on invalidated theory t
 and see if I could predict the outcome of football matches using some simple machine learning algorithims. So accuracy is in no 
 way guaranteed but I will try my best to produce results to some level of accuracy and consistency.
 
-**Running
+## Running
 ```
 ...
 ```
 
-## The MIT License (MIT)
+### The MIT License (MIT)
 Copyright (c) <2016> <Francis Maina>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -22,4 +22,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 <hr />
-**TODO
+## TODO
