@@ -19,3 +19,13 @@ to lose, and you should never dedicate time to sports trading a
 nd betting when you need to be involved in other personal
  or business activities.
 """
+import csv
+from stats.main import *
+
+# prepare command line arguements passed in
+hometeam = "abcd"
+awayteam = "qwerty"
+
+odds = [1.66, 3.58, 5.62]
+
+odds_stats(odds)
