@@ -30,12 +30,12 @@ import csv
 from stats.main import *
 
 # prepare command line arguments passed in
-hometeam = "abcd"
-awayteam = "qwerty"
+hometeam = {'team_name':"abcd", 'upset_potential':0,'rating': 1200, 'games_played':1}
+awayteam = {'team_name':"abcd", 'upset_potential':0,'rating': 1200, 'games_played':1}
 
 odds = [1.66, 3.58, 5.62]
 
 odds_percentage = odds_stats(odds)
 
 
-print get_best_odds(odds)[0]
+#print get_best_odds(odds)[0]
