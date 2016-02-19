@@ -30,12 +30,14 @@ import csv
 from stats.main import *
 
 # prepare command line arguments passed in
-hometeam = {'team_name':"abcd", 'upset_potential':0,'rating': 1200, 'games_played':1}
+hometeam = {'team_name':"abcd", 'upset_potential':0,'rating': 1259, 'games_played':1}
 awayteam = {'team_name':"abcd", 'upset_potential':0,'rating': 1200, 'games_played':1}
 
 odds = [1.66, 3.58, 5.62]
+actual_scores = [2,1]
+#odds_percentage = odds_stats(odds)
 
-odds_percentage = odds_stats(odds)
 
-
+elo_rating_analytics(hometeam,awayteam)
 #print get_best_odds(odds)[0]
+apply_elo_rating(hometeam,awayteam,actual_scores)

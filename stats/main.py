@@ -1,3 +1,6 @@
+from __future__ import division
+
+
 def odds_stats(odds):
     # we fist calculate the total of odds at stake
     # so there are only three possible outcomes in a match,either 1,2,3
@@ -26,7 +29,31 @@ class Match(object):
             return {'W': 'A', 'L': 'H', 'D': 0}
         else:
             return {'W': 0, 'L': 0, 'D': 1}
-'''
 
-def apply_elo_rating(actual_scores, home_team, away_team):
-'''
+
+def elo_rating_analytics(home_team, away_team):
+    r1 = (pow(10, (home_team['rating'] / 400)))
+    r2 = (pow(10, (away_team['rating'] / 400)))
+    e1 = (r1 / (r1 + r2))
+    e2 = (r2 / (r1 + r2))
+    if e1 == e2:
+        print "teams are equally balanced out therefore there is a high percent chance for a draw."
+    else:
+        print "Chances of wining are;", e1* 100, e2* 100
+    return {'H': e1, 'A': e2}
+
+
+##post match math
+def apply_elo_rating(home_team, away_team, actual_scores):
+    if actual_scores[0] > actual_scores[1]:
+        analytics = elo_rating_analytics(home_team, away_team)
+        rating1 = home_team['rating'] + (32 * (1 - analytics['H']))
+        rating2 = away_team['rating'] + (32 * (0 - analytics['A']))
+    elif actual_scores[1] > actual_scores[0]:
+        analytics = elo_rating_analytics(home_team, away_team)
+        rating1 = home_team['rating'] + (32 * (0 - analytics['H']))
+        rating2 = away_team['rating'] + (32 * (1 - analytics['A']))
+    print "New rating, ", rating1, rating2
+    return (rating1,rating2)
+
+
