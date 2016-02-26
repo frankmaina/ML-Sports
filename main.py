@@ -26,18 +26,23 @@ for weaker teams as the odds are stacked against them.
 Long odds: The likelihood of an event occurring is low.
 Short odds: The likelihood of an event occurring is high.
 """
-import csv
-from stats.main import *
+
+
+from training.main import create_ratings
 from engine.main import *
 
-# prepare command line arguments passed in
-hometeam = {'team_name': "abcd", 'upset_potential': 0, 'rating': 1259, 'games_played': 1}
-awayteam = {'team_name': "abcd", 'upset_potential': 0, 'rating': 1200, 'games_played': 1}
+mode = "train"
 
-odds = [11.95, 3.26, 1.84]
-actual_scores = [2, 1]
-# odds_percentage = odds_stats(odds)
+if mode=="predict":
 
+    # prepare command line arguments passed in
+    hometeam = {'team_name': "abcd", 'upset_potential': 0, 'rating': 1359, 'games_played': 1}
+    awayteam = {'team_name': "abcd", 'upset_potential': 0, 'rating': 1200, 'games_played': 1}
 
+    odds = [11.95, 3.26, 1.84]
+    actual_scores = [2, 1]
+    # odds_percentage = odds_stats(odds)
 
-apply_prediction(hometeam, awayteam, odds)
+    apply_prediction(hometeam, awayteam, odds)
+elif mode == "train":
+    create_ratings('EO.csv')

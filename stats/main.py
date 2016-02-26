@@ -53,6 +53,10 @@ def apply_elo_rating(home_team, away_team, actual_scores):
         analytics = elo_rating_analytics(home_team, away_team)
         rating1 = home_team['rating'] + (32 * (0 - analytics['H']))
         rating2 = away_team['rating'] + (32 * (1 - analytics['A']))
+    elif actual_scores[0] == actual_scores[1]:
+        analytics = elo_rating_analytics(home_team, away_team)
+        rating1 = home_team['rating'] + (32 * (0.5- analytics['H']))
+        rating2 = away_team['rating'] + (32 * (0.5 - analytics['A']))
     print "New rating, ", rating1, rating2
     return (rating1,rating2)
 

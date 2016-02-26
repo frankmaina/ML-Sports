@@ -16,3 +16,4 @@ def apply_prediction(home_team, away_team, odds):
     # we now apply prediction according to elo rating
     elo_chances = elo_rating_analytics(home_team, away_team)
     print "Chances are", elo_chances['H'] * 100, " for HOME and ", elo_chances['A'] * 100, " for AWAY"
+    print abs(elo_chances['H']-elo_chances['A'])
