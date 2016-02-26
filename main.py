@@ -45,4 +45,4 @@ if mode=="predict":
 
     apply_prediction(hometeam, awayteam, odds)
 elif mode == "train":
-    create_ratings('EO.csv')
+    create_ratings('E0.csv')
