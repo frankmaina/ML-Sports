@@ -1,4 +1,4 @@
-from __future__ import division
+﻿from __future__ import division
 
 
 def odds_stats(odds):
@@ -21,14 +21,14 @@ def get_best_odds(odds):
         return ('A', value)
 
 
-def get_match_winner(self, actual_scores):
+def get_match_winner(actual_scores):
     if actual_scores[0] > actual_scores[1]:
         # the home team won
-        return {'W': 'H', 'L': 'A', 'D': 0}
+        return "H"
     elif actual_scores[1] > actual_scores[0]:
-        return {'W': 'A', 'L': 'H', 'D': 0}
+        return "A"
     else:
-        return {'W': 0, 'L': 0, 'D': 1}
+        return "D"
 
 
 def elo_rating_analytics(home_team, away_team):
@@ -60,4 +60,6 @@ def apply_elo_rating(home_team, away_team, actual_scores):
     print "New rating, ", rating1, rating2
     return (rating1,rating2)
 
-
+'''
+def define_match_result(match, best_odds):
+    if best_odds[0] == '''
